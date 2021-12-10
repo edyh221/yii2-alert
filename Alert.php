@@ -13,6 +13,7 @@ class Alert extends \yii\base\Widget
     echo match (true) {
       Yii::$app->session->hasFlash('success') => $this->_message('success'),
       Yii::$app->session->hasFlash('error') => $this->_message('error'),
+      default => ''
     };
   }
 
